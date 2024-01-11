@@ -1,6 +1,6 @@
 """
 for old rasp (32bit)
-pip3 install opencv-python==3.4.6.27
+pip3 install "opencv-python<4.0" or pip3 install opencv-python==3.4.6.27
 pip3 install "numpy<1.20" or pip3 install numpy==1.19.5
 sudo apt-get install libatlas-base-dev
 sudo apt-get install libjasper-dev
