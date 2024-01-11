@@ -5,7 +5,20 @@ pip3 install "numpy<1.20" or pip3 install numpy==1.19.5
 sudo apt-get install libatlas-base-dev
 sudo apt-get install libjasper-dev
 sudo apt-get install libqt4-test libqt4-dev
+
+sudo apt-get install unclutter убираем курсор
+
+старт скрипта
 DISPLAY=:0 python3 usbtohdmi.py
+
+автозагрузка и постоянная работа
+xset s off
+xset -dpms
+
+crontab -e
+@reboot DISPLAY=:0 python3 /home/pi/usbtohdmi.py
+@reboot unclutter -idle 0.1 or @reboot sleep 30; DISPLAY=:0 unclutter -idle 0.1
+
 """
 
 import cv2
