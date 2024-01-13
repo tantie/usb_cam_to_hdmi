@@ -14,6 +14,9 @@ DISPLAY=:0 python3 usbtohdmi.py
 автозагрузка и постоянная работа
 xset s off
 xset -dpms
+sudo nano /etc/lightdm/lightdm.conf
+in [SeatDefaults] 
+xserver-command=X -s 0 -dpms
 
 crontab -e
 @reboot DISPLAY=:0 python3 /home/pi/usbtohdmi.py
